@@ -29,34 +29,34 @@ function Table() {
     useEffect(() => {getUsers()})
 
     return (
-        <div class="container">
-            <div className="text-center mt-4 mb-4"><h1>Users List</h1></div>
-            <div>
-      <label>
-        <input
-          type="checkbox"
-          value={isFiltered}
-          onChange={handleChange}
-          id="subscribe"
-          name="subscribe"
-        />
-        Filter Active
-      </label>
-    </div>
-        <table className="table table-hover">
-            <thead>
-                <tr>
-                    <th scope="col">id</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Gender</th>
-                    <th scope="col">Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                {tableData}
-            </tbody>
-        </table>
+        <div className="container">
+            <div className="text-center mt-4"><h1>Users List</h1></div>
+            <div className="d-flex justify-content-center mb-4">
+                <label>
+                    <input
+                    type="checkbox"
+                    value={isFiltered}
+                    onChange={handleChange}
+                    id="subscribe"
+                    name="subscribe"
+                    />
+                    Filter Active
+                </label>
+            </div>
+            <table className="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {tableData}
+                </tbody>
+            </table>
         </div>
     )
 }
