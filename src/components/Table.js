@@ -23,7 +23,7 @@ function Table() {
     useEffect(() => {getUsers()})
 
     return (
-        <div class="container">
+        <div className="container">
             <div className="text-center mt-4 mb-4"><h1>Active Users</h1></div>
         <table className="table table-hover">
             <thead>
